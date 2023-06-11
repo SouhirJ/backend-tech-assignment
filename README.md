@@ -24,19 +24,32 @@ Ensure you have the following software installed on your system before proceedin
 
 3. Use Maven to build the project:
 
-    mvn clean install
+    mvn clean install -DskipTests
 
-4. You can then run the Spring Boot application using:
+4. You can run this application from your favorite IDE or by running the following command:
+        
+        ./mvnw spring-boot:run
+        
+     -> The application will be available at http://localhost:8080/api/v1/.
+     
+      The API is accessed from the URL
+       
+         http://localhost:8080/swagger-ui/index.html
 
-    mvn spring-boot:run
-
-  -> The application will be available at http://localhost:8080.
-
-# Testing the application
-To run the tests you will need Docker desktop installed and running. This allows us to test as close to production as possible on our development machines as well as a clean and reproducible testing environment each time.
+5. Try it out with Docker
+    
+    You'll need Docker installed.
+   
+         docker-compose up 
+    
+  -> The application will be available at http://localhost:8088/api/v1/.
+  
+   The API is accessed from the URL
+  
+      http://localhost:8088/swagger-ui/index.html
 
 # GitHub Actions
-If you want to deploy to Docker Hub a new version of your application each time a commit is made or merged into the master branch you can use GitHub actions.
+To deploy to Docker Hub a new version of our application each time a commit is made or merged into the master branch we can use GitHub actions.
 
 # Contact
 [Souhir Jedidi] - [souhirdjedidi@gmail.com]
