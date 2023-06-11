@@ -1,0 +1,18 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+
+info:
+  application:
+    name:  Online Advertisement
+    description: An Online Car Advertising Application
+    author: Souhir Jedidi
+    version: '@project.version@'
+spring:
+  profiles:
+    active: dev
